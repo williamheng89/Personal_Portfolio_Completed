@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <title>William's Porfolio</title>
+</head>
+<body>
+    <header> 
+        <h1> <b>Howdy!</b> </h1>
+    </header>
+    <nav>
+        <a href="#home_section">Home</a>
+        <a href="#experience_skills_section">Experience / Skills</a>
+        <a href="#personal_projects_section">Personal Projects</a>
+        <a href="#knowledge_base_section">Knowledge Base</a>
+        <a href="#contact_section">Contact</a>
+    </nav>
+    <main>
+        <button id="theme-toggle">
+            🌞
+        </button>
+
+        <noscript>
+            <h3>JavaScript has been turned off. Form and Light Switch will not work &#128532;</h3>
+            <style>
+                #theme-toggle {
+                    display: hidden;
+                }
+            </style>
+        </noscript>
+        <section id="home_section">
+            <section id="landing_page_photos">
+                <img src="assets/images/william_headshot.jpg" id="headshot_photo" alt="William Heng Headshot Photo">
+
+                <!-- <figure>
+                    <figcaption id="landscape_caption">December 2024: I visited Seattle</figcaption>
+                </figure> -->
+                <img src="assets/images/seattle.png" id="landscape_photo" alt="Scenic Photo of Seattle" >
+            </section>
+            
+
+            <!-- <hgroup>
+                <h2>Hey!</h2>
+                <p><strong>I'm William, nice to meet you!</strong></p>
+            </hgroup> -->
+            <section id="about_me_section">
+                <section id="about_me_text">
+                    <h2>About Me</h2>
+                    <aside>
+                            I did my undergraduate and graduate degree in Computer Science at <abbr title="University of California, San Diego">UCSD</abbr>. 
+                            In my graduate studies I specialized in Computer Systems which emphasizes Operating Systems, Networking, Distributed Systems, and much more.
+                            Currently, I am working at as a Software Engineer at ServiceNow focusing in Cloud Engineering. 
+                            I really enjoy software engineering and am constantly trying learn more (both in breadth and depth) and create better things. 
+                    </aside>
+                    <blockquote id="quote">
+                        "Do what you can, with what you have, where you are."
+                        <footer>- <cite>Theodore Roosevelt</cite></footer>
+                    </blockquote>
+                </section>
+                <img src="assets/images/la_jolla_ocean_beach.jpg" class="la_jolla_photo">
+            </section>
+            
+        </section>
+        <hr>
+        <section id="experience_skills_section">
+            <h2><i>Work Experiences</i></h2>
+            <ul id="experiences">
+                <li class="experience_element">
+                    <h3 class="company_name">ServiceNow</h3>
+                    <!-- <img src="" alt="ServiceNow Logo"> -->
+                    <img src="assets/images/servicenow_logo.jpg" alt="ServiceNow Logo" class="company_logo">
+                    <details>
+                        <summary>Details</summary>
+                        <p>
+                            Tenure: June 2025 - September 2025 <br>
+                            Position: Software Engineer Intern <br>
+                            Responsibilities: 
+                        </p>
+                    </details>
+                </li>
+                <li class="experience_element">
+                    <h3 class="company_name">ServiceNow</h3>
+                    <img src="assets/images/servicenow_logo.jpg" alt="ServiceNow Logo" class="company_logo">
+                    <details>
+                        <summary>Details</summary>
+                        <p>
+                            Tenure: June 2025 - September 2025 <br>
+                            Position: Software Engineer Intern <br>
+                            Responsibilities: 
+                        </p>
+                    </details>
+                </li>
+                <li class="experience_element">
+                    <h3 class="company_name">Northwestern Mutual</h3>
+                    <img src="assets/images/northwestern-mutual_logo.jpg" alt="Northwestern Mutual_logo" class="company_logo">
+                    <details>
+                        <summary>Details</summary>
+                        <p>
+                            Tenure: June 2025 - September 2025 <br>
+                            Position: Software Engineer Intern <br>
+                            Responsibilities: 
+                        </p>
+                    </details>
+                </li>
+            </ul>
+            <h2><i>Skills</i></h2>
+            <section id="skills">
+                <table>
+                    <caption>My Growing Skillset</caption>
+                    <colgroup>
+                        <col span="2" style="background-color:lightgray">
+                      </colgroup>
+                    <tr>
+                        <th>Domain</th>
+                        <th>Tech Stack</th>
+                    </tr>
+                    <tr>
+                        <td>Programming:</td>
+                        <td>
+                            <ul>
+                                <li><code>Python</code></li>
+                                <li><code>Java</code></li>
+                                <li><code>C++</code></li>
+                                <li><code>C</code></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Databases:</td>
+                        <td>
+                            <ul>
+                                <li><code>SQL</code></li>
+                                <li><code>PostgreSQL</code></li>
+                                <li><code>SQLite</code></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Web Development:</td>
+                        <td>
+                            <ul>
+                                <li><code>HTML</code></li>
+                                <li><code>CSS</code></li>
+                                <li><code>JavaScript</code></li>
+                                <li><code>Node.js</code></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Version Control:</td>
+                        <td>
+                            <ul>
+                                <li><code>Git</code></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cloud Providers:</td>
+                        <td>
+                            <ul>
+                                <li><code>AWS</code></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>DevOps:</td>
+                        <td>
+                            <ul>
+                                <li><code>Docker</code></li>
+                                <li><code>Terraform</code></li>
+                                <li><code>Kubernetes</code></li>
+                                <li><code>Jenkins</code></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </section>
+        </section>
+        <hr>
+        <section id="personal_projects_section">
+            <h2><i>Personal Projects</i></h2>
+            <ul id="projects">
+                <li class="project_element">
+                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
+                    <section class="project_name_description">
+                        <h3>C Preprocessor</h3>
+                        <details>
+                            <summary>Details</summary>
+                            <p>
+                                Developed a CPP in a Linux environment that processes C source files and removes comments from source code.
+                                Designed the program using a Deterministic Finite Automaton (DFA) by enumerating states.
+                                Automated the orchestration of tests with a Makefile.
+                            </p>
+                        </details>
+                    </section>
+                </li>
+                <li class="project_element">
+                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
+                    <section class="project_name_description">
+                        <h3>Discord "Would You Rather" Bot</h3>
+                            <details>
+                                <summary>Details</summary>
+                                <p>
+                                    Fun personal project for my Discord server for friends to enjoy.
+                                    Developed and deployed a Discord bot to generate “would you rather” jokes sourced from the subreddit r/WouldYouRather.
+                                    Utilized Discord and Reddit APIs.
+                                </p>
+                            </details>
+                    </section>
+                </li>
+                <li class="project_element">
+                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
+                    <section id="project_name_description">
+                        <h3>IBD Web Application</h3>
+                        <details>
+                            <summary>Details</summary>
+                            <p>
+                                Developed and supported a full-stack web-application for the UCSD Boolean Lab.
+                                Simplified complex data visualizations for Inflammatory Bowel Disease.
+                                Collaborated with lab members and delivered the project following end-to-end agile practices.
+                                Enhanced accessibility and efficiency for graduate researchers by streamlining data interpretation.
+                            </p>
+                        </details>
+                    </section>    
+                </li>
+                <li class="project_element">
+                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
+                    <section id="project_name_description">
+                        <h3>Directory File Organizer</h3>
+                        <details>
+                            <summary>Details</summary>
+                            <p>
+                                Developed a program to recursively traverse directories and efficiently sort them based on file extensions.
+                                Used Python and libraries (os, shutil).
+                            </p>
+                        </details>
+                    </section>
+                </li>
+                <li class="project_element">
+                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
+
+                    <section id="project_name_description">
+                        <h3>Fortune Telling Web Application</h3>
+                        <details>
+                            <summary>Details</summary>
+                            <p>
+                                Collaborated with 10 students to design and develop a Harry Potter themed fortune telling web application using Agile Development principles.
+                            </p>
+                        </details>
+                    </section>
+                </li>
+            </ul>
+        </section>
+        <hr>
+        <section id="knowledge_base_section">
+            <h2><em><a href="https://github.com/williamheng89/My-Knowledge-Base" target="_blank">Knowledge Base</a></em></h2>
+            <ul id="knowledge_base">
+                <li class="knowledge_base_element"><a href="https://github.com/williamheng89/My-Knowledge-Base/tree/main/Leetcode" target="_blank" rel="noopener noreferrer">Data Structures and Algorithms</a></li>
+                <li class="knowledge_base_element">Cloud Engineering</li>
+                <li class="knowledge_base_element">Web Development</li>
+                <li class="knowledge_base_element">DevOps</li>
+            </ul>
+        </section>
+        <hr>
+        <section id="contact_section">
+            <form action="https://httpbin.org/post" method="post">        
+                <fieldset>
+                    <legend>Contact Me!</legend>
+            
+                    <label for="first_name">First Name:</label>
+                    <input type="text" name="first_name" id="first_name" placeholder="First" required
+                        pattern="[A-Za-z\s-]{1,50}" title="Only letters, spaces, and hyphens allowed, max length is 50 characters">
+                    <span></span>
+            
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" name="last_name" id="last_name" placeholder="Last" required 
+                        pattern="[A-Za-z\s-]{1,50}" title="Only letters, spaces, and hyphens allowed, max length is 50 characters">
+                    <span></span>
+            
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+                    <span></span>
+            
+                    <label for="purpose">Purpose of Contact:</label>
+                    <select name="purpose" id="purpose">
+                        <option value="academic">Academic</option>
+                        <option value="career">Career</option>
+                        <option value="business">Business</option>
+                        <option value="general">General Inquiry</option>
+                    </select>
+            
+                    <label for="message">Message:</label>
+                    <textarea name="message" id="message" placeholder="Let me know something!" rows="4" required
+                        maxlength="500" title="Maximum 500 characters allowed"></textarea>
+                    <span></span>
+                    <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+
+                    <input type="hidden" name="form_errors" id="form_errors">
+
+                    <output name="info_mesage" for="info"></output>
+                    <output name="error_mesage" for="error"></output>
+                    <button type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </section>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const form = document.querySelector("form");
+                const errorOutput = document.querySelector("output[name='error_mesage']");
+                const infoOutput = document.querySelector("output[name='info_mesage']");
+                const messageField = document.getElementById("message");
+                const formErrorsInput = document.getElementById("form_errors");
+                let form_errors = [
+                    {first_name: []},
+                    {last_name: []},
+                ];
+        
+                const textFields = document.querySelectorAll("input[type='text']");
+        
+                textFields.forEach(field => {
+                    field.addEventListener("input", function () {
+                        const validPattern = /^[A-Za-z\s-]{1,50}$/; // Allows letters, spaces, and hyphens
+                        if (!validPattern.test(field.value)) {
+                            let invalid_char = field.value;
+                            field.value = field.value.replace(/[^A-Za-z\s-]/g, ""); // Remove invalid characters
+                            flashField(field, `${field.name}: Invalid character removed: ${invalid_char}`);
+                            let fieldError = form_errors.find(obj => obj.hasOwnProperty(field.name));
+                            if (fieldError) {
+                                fieldError[field.name].push(invalid_char);
+                            }
+                        }
+                    });
+                });
+        
+                // Character countdown for the textarea
+                messageField.addEventListener("input", function () {
+                    const maxLength = messageField.getAttribute("maxlength");
+                    const remaining = maxLength - messageField.value.length;
+        
+                    infoOutput.textContent = `${remaining} characters remaining`;
+        
+                    if (remaining <= 50) {
+                        infoOutput.classList.add("warning");
+                    } else {
+                        infoOutput.classList.remove("warning");
+                    }
+                });
+        
+                // Custom validation handling
+                form.addEventListener("submit", function (event) {
+                    event.preventDefault(); // Prevent the form from submitting and refreshing the page
+                    formErrorsInput.value = JSON.stringify(form_errors);
+                    form.submit();
+                });
+        
+                // Function to display error messages in the <output> field
+                function showErrorMessage(message) {
+                    errorOutput.innerHTML = message;
+                    fadeOutErrorMessage();
+                }
+        
+                // Function to flash fields on error and display a message in <output>
+                function flashField(field, message) {
+                    field.classList.add("flash");
+                    showErrorMessage(message);
+        
+                    setTimeout(() => {
+                        field.classList.remove("flash");
+                    }, 500);
+        
+                    fadeOutErrorMessage();
+                }
+        
+                // Function to fade out the error message after a short duration
+                function fadeOutErrorMessage() {
+                    setTimeout(() => {
+                        errorOutput.innerHTML = "";
+                    }, 3000);
+                }
+            });
+            
+            //When no JS, it displays none --> else displays
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.style.display = "block";
+            // Check the stored theme from localStorage and apply it
+            if (localStorage.getItem('theme') === 'dark') {
+                document.body.setAttribute('data-theme', 'dark');
+                themeToggle.textContent = '🌙'; // Change button icon for dark mode
+            } else {
+                themeToggle.textContent = '🌞'; // Default to light mode
+            }
+
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', () => {
+                if (document.body.getAttribute('data-theme') === 'dark') {
+                    document.body.removeAttribute('data-theme');
+                    localStorage.setItem('theme', 'light');
+                    themeToggle.textContent = '🌞'; // Switch to light mode
+                } else {
+                    document.body.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('theme', 'dark');
+                    themeToggle.textContent = '🌙'; // Switch to dark mode
+                }
+                console.log('I WAS CLICKED')
+            });
+        </script>
+    </main>
+    <hr>    
+    <footer>
+        <p>&copy; 2025 William Heng. All rights reserved.</p>
+    </footer>
+</body>
+</html>

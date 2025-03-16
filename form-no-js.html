@@ -1,0 +1,35 @@
+<section id="contact_section">
+    <form action="https://httpbin.org/post" method="post">        
+        <fieldset>
+            <legend>Contact Me!</legend>
+
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" placeholder="First" required
+                pattern="[A-Za-z\s-]{1,50}" maxlength="50" title="Only letters, spaces, and hyphens allowed, max length is 50 characters">
+            <span></span>
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Last" required 
+                pattern="[A-Za-z\s-]{1,50}" maxlength="50" title="Only letters, spaces, and hyphens allowed, max length is 50 characters">
+            <span></span>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            <span></span>
+            <label for="purpose">Purpose of Contact:</label>
+            <select name="purpose" id="purpose">
+                <option value="academic">Academic</option>
+                <option value="career">Career</option>
+                <option value="business">Business</option>
+                <option value="general">General Inquiry</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" placeholder="Let me know something!" rows="4" required
+                maxlength="500" title="Maximum 500 characters allowed"></textarea>
+            <span></span>
+            <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+            <output name="info_mesage" for="info"></output>
+            <output name="error_mesage" for="error"></output>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</section>

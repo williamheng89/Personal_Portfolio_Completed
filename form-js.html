@@ -1,0 +1,118 @@
+<section id="contact_section">
+    <form action="https://httpbin.org/post" method="post">        
+        <fieldset>
+            <legend>Contact Me!</legend>
+    
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" id="first_name" placeholder="First" required
+                pattern="[A-Za-z\s-]{1,50}" title="Only letters, spaces, and hyphens allowed, max length is 50 characters">
+            <span></span>
+    
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" id="last_name" placeholder="Last" required 
+                pattern="[A-Za-z\s-]{1,50}" title="Only letters, spaces, and hyphens allowed, max length is 50 characters">
+            <span></span>
+    
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
+            <span></span>
+    
+            <label for="purpose">Purpose of Contact:</label>
+            <select name="purpose" id="purpose">
+                <option value="academic">Academic</option>
+                <option value="career">Career</option>
+                <option value="business">Business</option>
+                <option value="general">General Inquiry</option>
+            </select>
+    
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" placeholder="Let me know something!" rows="4" required
+                maxlength="500" title="Maximum 500 characters allowed"></textarea>
+            <span></span>
+            <input type="hidden" name="possible_bot" id="possible_bot" value="true">
+
+            <input type="hidden" name="form_errors" id="form_errors">
+
+            <output name="info_mesage" for="info"></output>
+            <output name="error_mesage" for="error"></output>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+</section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("form");
+        const errorOutput = document.querySelector("output[name='error_mesage']");
+        const infoOutput = document.querySelector("output[name='info_mesage']");
+        const messageField = document.getElementById("message");
+        const formErrorsInput = document.getElementById("form_errors");
+        let form_errors = [
+            {first_name: []},
+            {last_name: []},
+        ];
+
+        const textFields = document.querySelectorAll("input[type='text']");
+
+        textFields.forEach(field => {
+            field.addEventListener("input", function () {
+                const validPattern = /^[A-Za-z\s-]{1,50}$/; // Allows letters, spaces, and hyphens
+                if (!validPattern.test(field.value)) {
+                    let invalid_char = field.value;
+                    field.value = field.value.replace(/[^A-Za-z\s-]/g, ""); // Remove invalid characters
+                    flashField(field, `${field.name}: Invalid character removed: ${invalid_char}`);
+                    let fieldError = form_errors.find(obj => obj.hasOwnProperty(field.name));
+                    if (fieldError) {
+                        fieldError[field.name].push(invalid_char);
+                    }
+                }
+            });
+        });
+
+        // Character countdown for the textarea
+        messageField.addEventListener("input", function () {
+            const maxLength = messageField.getAttribute("maxlength");
+            const remaining = maxLength - messageField.value.length;
+
+            infoOutput.textContent = `${remaining} characters remaining`;
+
+            if (remaining <= 50) {
+                infoOutput.classList.add("warning");
+            } else {
+                infoOutput.classList.remove("warning");
+            }
+        });
+
+        // Custom validation handling
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the form from submitting and refreshing the page
+            formErrorsInput.value = JSON.stringify(form_errors);
+            form.submit();
+        });
+
+        // Function to display error messages in the <output> field
+        function showErrorMessage(message) {
+            errorOutput.innerHTML = message;
+            fadeOutErrorMessage();
+        }
+
+        // Function to flash fields on error and display a message in <output>
+        function flashField(field, message) {
+            field.classList.add("flash");
+            showErrorMessage(message);
+
+            setTimeout(() => {
+                field.classList.remove("flash");
+            }, 500);
+
+            fadeOutErrorMessage();
+        }
+
+        // Function to fade out the error message after a short duration
+        function fadeOutErrorMessage() {
+            setTimeout(() => {
+                errorOutput.innerHTML = "";
+            }, 3000);
+        }
+    });
+</script>

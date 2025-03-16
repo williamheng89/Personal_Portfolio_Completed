@@ -1,0 +1,317 @@
+
+:root {
+    --fav-blue: rgb(74, 96, 132);
+    --fav-gray: lightgray; 
+    --fav-hover: color-mix(in srgb, var(--fav-blue) 70%, var(--fav-gray) 30%);
+    --background-color-light: var(--fav-blue);
+    --background-color-dark: #333;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); } /* Moves up */
+}
+  
+h1 {
+    display: inline-block;
+    animation: bounce 1s infinite ease-in-out;
+}
+
+nav {
+    position: sticky; /* Keeps the nav bar always present on the page*/
+    top: 0;
+    /* padding: 2%; */
+    background-color: white;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+}
+nav a {
+    display: block;
+    text-align: center;
+    margin-left: 1%;
+    padding: 1%
+}
+nav a:hover {
+    background-color: var(--background-color);
+}
+
+body {
+    font-family: "Nanum Gothic", serif;
+    
+}
+main {
+    background-color: var(--background-color-light);
+}
+
+body[data-theme="dark"] main {
+    background-color: var(--background-color-dark);
+}
+
+/* Everything for Home Section */
+#headshot_photo {
+    border-style: solid;
+    border-color: white;
+    border-width: 1%;
+    border-radius: 50%;
+    margin: 2%;
+    max-width: 30dvw;
+    height: 100%;
+
+    
+}
+#landscape_photo {
+    border-style: solid;
+    border-color: white;
+    border-width: 1%;
+    margin: 2%;
+    max-width: 55dvw;
+    height: 90%;
+
+}
+#landing_page_photos {
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+#home_section {
+    color: white;
+}
+
+
+.la_jolla_photo {
+    max-width: 40dvw;
+    height: auto;
+    margin: 2%;
+    /* overflow: scroll; */
+    
+}
+
+#about_me_text {
+    max-width: 600px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+#about_me_section {
+    background-color: var(--fav-gray, beige);
+    margin: 4%;
+    display: flex;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+
+blockquote {
+    text-align: center;
+}
+
+/* Everything for Experiences and Skills Section */
+#experiences {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    align-items: flex-start;
+    
+    .experience_element {
+        list-style-type: none;
+        background-color: var(--fav-gray, beige);
+        border: solid darkgray;
+        border-width: .25dvw;
+        border-radius: 3dvw;
+        padding: 1%;
+        margin: 1%;
+    }
+}
+
+
+.company_logo {
+    max-width: 20dvw;
+    display: block;
+    margin: auto;
+}
+.company_name {
+    text-align: center;
+}
+
+#skills {
+    display: flex;
+    justify-content: center;
+    /* background-color: lightgray; */
+}
+/* Everything for Projects Section */
+li:has(a) {
+    list-style-type: "🔗";
+  }
+#projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .project_element {
+        background-color: var(--fav-gray, beige);
+        list-style-type: none;
+        display: flex;
+        margin: 1%;
+        max-width: 80dvw;
+        height: auto;
+    }
+}
+
+.project_image {
+    max-height: 200px;
+    margin: 2%;
+}
+/* Everything for Knowledge Base Section */
+#knowledge_base {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+    .knowledge_base_element {
+        background-color: var(--fav-gray, beige);
+        /* list-style-type: n   one; */
+        border: solid black;
+        padding: 3%;
+        border-radius: 3dvh;
+        min-width: 20dvw;
+        height: 100%;
+        
+    }
+}
+
+details summary {
+    list-style: none; /* Remove default arrow */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+details summary::before {
+    content: "▶"; /* Right arrow (closed) */
+    display: inline-block;
+    margin-right: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+details[open] summary::before {
+    transform: rotate(90deg); /* Rotate when open */
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+    padding: 10px;
+    border: none;
+}
+
+label {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    max-height: 200px;
+}
+
+/* Error Icon for Invalid Input */
+input:invalid + span::before,
+textarea:invalid + span::before {
+    content: "✖ Invalid input";
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+    display: block;
+}
+
+/* Success Icon for Valid Input */
+input:valid + span::before,
+textarea:valid + span::before {
+    content: "✔ Valid";
+    color: green;
+    font-size: 12px;
+    margin-left: 5px;
+    display: block;
+}
+
+button {
+    margin-top: 15px;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.warning {
+    color: orange;
+    font-weight: bold;
+}
+
+.flash {
+    animation: flash 0.3s ease-in-out;
+}
+
+@keyframes flash {
+    0%, 100% { background-color: white; }
+    50% { background-color: #ffcccc; }
+}
+
+output {
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+output[name="error_mesage"] {
+    color: red;
+    font-weight: bold;
+}
+
+
+
+/* Media Queries: Particularly for Responsiveness of different devices */
+@media only screen and (max-width: 800px) {
+    .la_jolla_photo {
+        display: none;
+    }
+    #experiences {
+        flex-direction: column;
+        align-items: center;
+    }
+    .company_logo {
+        max-width: 40dvw;
+    }
+    #knowledge_base {
+        flex-direction: column;
+        align-items: center;
+    }
+}
