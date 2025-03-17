@@ -1,4 +1,4 @@
-const remoteDataUrl = "https://api.jsonbin.io/v3/b/67d776bf8a456b7966772fc0";
+const remoteDataUrl = "https://api.jsonbin.io/v3/b/67d796978960c979a57303ac";
 
 // Function to create and display project cards
 function displayProjects(data) {
