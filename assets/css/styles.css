@@ -7,16 +7,6 @@
     --background-color-dark: #333;
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); } /* Moves up */
-}
-  
-h1 {
-    display: inline-block;
-    animation: bounce 1s infinite ease-in-out;
-}
-
 nav {
     position: sticky; /* Keeps the nav bar always present on the page*/
     top: 0;
