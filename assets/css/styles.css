@@ -8,16 +8,20 @@
     --font-color-light: black;
     --font-color-dark: white;
 }
+html {
+    scroll-padding-top: 3.5em; /* Adjust based on navbar height */
+}
 
 nav {
     position: sticky; /* Keeps the nav bar always present on the page*/
-    top: 0;
+    top: 0px;
     /* padding: 2%; */
     background-color: white;
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     height: auto;
+    z-index: 1000; /* Ensures the navbar stays on top */
 }
 nav a {
     display: block;
