@@ -42,10 +42,14 @@ main {
     background-color: var(--background-color-light);
 }
 
+/* Dark Mode */
 body[data-theme="dark"] main {
     background-color: var(--background-color-dark);
 }
 body[data-theme="dark"] h2 {
+    color: var(--font-color-dark);
+}
+body[data-theme="dark"] caption {
     color: var(--font-color-dark);
 }
 h2 {
@@ -145,6 +149,16 @@ blockquote {
     display: flex;
     justify-content: center;
     /* background-color: lightgray; */
+}
+
+caption {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 1%;
+    color: var(--font-color-light)
+}
+table {
+    width: 50%;
 }
 /* Everything for Projects Section */
 project-container {
