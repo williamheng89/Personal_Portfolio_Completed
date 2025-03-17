@@ -5,6 +5,8 @@
     --fav-hover: color-mix(in srgb, var(--fav-blue) 70%, var(--fav-gray) 30%);
     --background-color-light: var(--fav-blue);
     --background-color-dark: #333;
+    --font-color-light: black;
+    --font-color-dark: white;
 }
 
 nav {
@@ -39,7 +41,15 @@ main {
 body[data-theme="dark"] main {
     background-color: var(--background-color-dark);
 }
-
+body[data-theme="dark"] h2 {
+    color: var(--font-color-dark);
+}
+h2 {
+    /* color: red; */
+    margin-left: 1%;
+    font-size: 2rem;
+    color: var(--font-color-light);
+}
 /* Everything for Home Section */
 #headshot_photo {
     border-style: solid;
