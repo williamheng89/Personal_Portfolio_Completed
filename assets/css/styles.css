@@ -143,23 +143,14 @@ blockquote {
     /* background-color: lightgray; */
 }
 /* Everything for Projects Section */
-li:has(a) {
-    list-style-type: "🔗";
-  }
-#projects {
+project-container {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
-    .project_element {
-        background-color: var(--fav-gray, beige);
-        list-style-type: none;
-        display: flex;
-        margin: 1%;
-        max-width: 80dvw;
-        height: auto;
-    }
+    flex-wrap: wrap; /* Allows wrapping if cards don't fit */
+    gap: 16px; /* Space between cards */
+    justify-content: center; /* Centers the cards horizontally */
+    align-items: stretch; /* Makes cards the same height */
 }
+
 
 .project_image {
     max-height: 200px;

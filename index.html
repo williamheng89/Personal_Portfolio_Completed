@@ -11,6 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
     <title>William's Porfolio</title>
+    <script src="assets/components/project-card.js"></script>
+    <!-- defer attribute because we want the script to be loaded after DOM is fully constructed -->
+    <script src="assets/js/main.js" defer></script>
 </head>
 <body>
     <header> 
@@ -187,77 +190,10 @@
         <hr>
         <section id="personal_projects_section">
             <h2><i>Personal Projects</i></h2>
-            <ul id="projects">
-                <li class="project_element">
-                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
-                    <section class="project_name_description">
-                        <h3>C Preprocessor</h3>
-                        <details>
-                            <summary>Details</summary>
-                            <p>
-                                Developed a CPP in a Linux environment that processes C source files and removes comments from source code.
-                                Designed the program using a Deterministic Finite Automaton (DFA) by enumerating states.
-                                Automated the orchestration of tests with a Makefile.
-                            </p>
-                        </details>
-                    </section>
-                </li>
-                <li class="project_element">
-                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
-                    <section class="project_name_description">
-                        <h3>Discord "Would You Rather" Bot</h3>
-                            <details>
-                                <summary>Details</summary>
-                                <p>
-                                    Fun personal project for my Discord server for friends to enjoy.
-                                    Developed and deployed a Discord bot to generate “would you rather” jokes sourced from the subreddit r/WouldYouRather.
-                                    Utilized Discord and Reddit APIs.
-                                </p>
-                            </details>
-                    </section>
-                </li>
-                <li class="project_element">
-                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
-                    <section id="project_name_description">
-                        <h3>IBD Web Application</h3>
-                        <details>
-                            <summary>Details</summary>
-                            <p>
-                                Developed and supported a full-stack web-application for the UCSD Boolean Lab.
-                                Simplified complex data visualizations for Inflammatory Bowel Disease.
-                                Collaborated with lab members and delivered the project following end-to-end agile practices.
-                                Enhanced accessibility and efficiency for graduate researchers by streamlining data interpretation.
-                            </p>
-                        </details>
-                    </section>    
-                </li>
-                <li class="project_element">
-                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
-                    <section id="project_name_description">
-                        <h3>Directory File Organizer</h3>
-                        <details>
-                            <summary>Details</summary>
-                            <p>
-                                Developed a program to recursively traverse directories and efficiently sort them based on file extensions.
-                                Used Python and libraries (os, shutil).
-                            </p>
-                        </details>
-                    </section>
-                </li>
-                <li class="project_element">
-                    <img src="assets/images/c_preprocessor_project_logo.png" alt="c_programming_logo" class="project_image">
-
-                    <section id="project_name_description">
-                        <h3>Fortune Telling Web Application</h3>
-                        <details>
-                            <summary>Details</summary>
-                            <p>
-                                Collaborated with 10 students to design and develop a Harry Potter themed fortune telling web application using Agile Development principles.
-                            </p>
-                        </details>
-                    </section>
-                </li>
-            </ul>
+            <button id="loadLocalBtn">Load Local</button>
+            <button id="loadRemoteBtn">Load Remote</button>
+            <project-container></project-container>
+            
         </section>
         <hr>
         <section id="knowledge_base_section">
